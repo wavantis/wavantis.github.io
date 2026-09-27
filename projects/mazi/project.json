@@ -2,16 +2,31 @@
   "slug": "mazi",
   "title": "Mazi",
   "category": "Award-Winning Android Application",
+  "type": "Award-Winning Project",
+  "year": "2017",
   "role": "Mobile Developer",
-  "team": "4 people",
-  "description": "A collaborative learning application designed to help students find learning partners, choose learning materials, share documents, and discuss subjects together.",
-  "contribution": "Mobile application development.",
+  "team": "4 members",
+  "description": "An Android-based collaborative learning application designed to help students find friends to learn with. Students can choose learning materials, find learning partners, share materials and documents, share knowledge, and discuss subjects together. The concept focused on collaborative and social learning.",
+  "contribution": "Responsible for mobile application development as part of a four-person team.",
+  "teamComposition": [
+    "Mobile Developer - Risnawan Budianto",
+    "Backend Developer",
+    "UI/UX Designer",
+    "Presentation and pitching"
+  ],
   "technologies": ["Android", "Java"],
   "image": "cover.svg",
   "imageAlt": "Placeholder artwork for Mazi; replace with project media.",
   "screenshots": [],
+  "features": [
+    "Choose learning materials",
+    "Find learning partners",
+    "Share learning materials and documents",
+    "Share knowledge and discuss subjects"
+  ],
   "achievement": "1st Place - Mobile App Competition 2017",
   "featured": true,
+  "highlighted": false,
   "professional": false,
   "isPrivate": false
 }

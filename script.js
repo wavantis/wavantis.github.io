@@ -8,9 +8,9 @@ function appendText(parent, tagName, className, text) {
   return element;
 }
 
-function createProjectCard(project) {
+function createProjectCard(project, index) {
   const article = document.createElement("article");
-  article.className = "project-card";
+  article.className = project.highlighted ? "project-card project-card-highlighted" : "project-card";
 
   const link = document.createElement("a");
   link.className = "project-card-link";
@@ -32,13 +32,18 @@ function createProjectCard(project) {
   body.className = "project-card-body";
   const kicker = document.createElement("div");
   kicker.className = "project-kicker";
+  appendText(kicker, "span", "project-order", String(index + 1).padStart(2, "0"));
   appendText(kicker, "span", "", project.category);
+  if (project.type) appendText(kicker, "span", "project-type", project.type);
   if (project.year) appendText(kicker, "span", "", project.year);
+  if (project.status) appendText(kicker, "span", "project-status-label", project.status);
   if (project.professional || project.isPrivate) appendText(kicker, "span", "project-private", "Professional work");
   body.append(kicker);
 
   appendText(body, "h3", "project-title", project.title);
   appendText(body, "p", "project-description", project.description);
+  if (project.achievement) appendText(body, "p", "project-achievement", `🏆 ${project.achievement}`);
+  if (project.achievement) appendText(body, "p", "project-achievement", project.achievement);
 
   if (Array.isArray(project.technologies) && project.technologies.length) {
     const tags = document.createElement("ul");
@@ -69,8 +74,9 @@ async function renderProjects() {
     }));
 
     projectGrid.replaceChildren();
-    for (const project of projects.filter((item) => item.featured !== false)) {
-      projectGrid.append(createProjectCard(project));
+    const featuredProjects = projects.filter((item) => item.featured !== false);
+    for (const [index, project] of featuredProjects.entries()) {
+      projectGrid.append(createProjectCard(project, index));
     }
     if (!projectGrid.children.length) {
       appendText(projectGrid, "p", "project-status", "No featured projects are available yet.");

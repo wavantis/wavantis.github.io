@@ -69,14 +69,22 @@ h2 { margin: 0; font-size: clamp(34px, 4.3vw, 50px); font-weight: 500; letter-sp
 .project-card { min-width: 0; border: 1px solid var(--line); background: var(--surface); transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
 .project-card:hover { transform: translateY(-4px); border-color: #aebbb2; box-shadow: 0 12px 28px #18221e0a; }
 .project-card-link { height: 100%; display: flex; flex-direction: column; color: inherit; text-decoration: none; }
+.project-card-highlighted { grid-column: 1 / -1; }
+.project-card-highlighted .project-card-link { display: grid; grid-template-columns: 1.05fr .95fr; }
+.project-card-highlighted .project-image-wrap { height: 100%; min-height: 270px; aspect-ratio: auto; }
+.project-card-highlighted .project-card-body { padding: clamp(22px, 4vw, 48px); }
+.project-card-highlighted .project-title { font-size: clamp(26px, 3.4vw, 38px); }
 .project-image-wrap { position: relative; overflow: hidden; aspect-ratio: 1.65; background: var(--paper-deep); }
 .project-image-wrap img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .35s ease; }
 .project-card:hover .project-image-wrap img { transform: scale(1.025); }
 .project-card-body { padding: 20px 20px 18px; display: flex; flex: 1; flex-direction: column; }
 .project-kicker { display: flex; flex-wrap: wrap; gap: 7px 10px; align-items: center; margin-bottom: 12px; color: var(--muted); font: 10px var(--mono); text-transform: uppercase; }
+.project-order { color: var(--accent); font-weight: 500; }
+.project-type, .project-status-label { color: var(--accent); }
 .project-private { color: var(--accent); }
 .project-title { margin: 0; font-size: 22px; font-weight: 500; line-height: 1.2; }
 .project-description { margin: 11px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.project-achievement { margin: 0 0 16px; color: var(--accent); font-size: 12px; font-weight: 700; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding: 0; list-style: none; }
 .project-tags li { padding: 4px 8px; border: 1px solid var(--line); color: #46534c; font: 10px var(--mono); }
 .project-card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: 13px; border-top: 1px solid var(--line); color: var(--accent); font-size: 12px; font-weight: 600; }
@@ -100,7 +108,7 @@ h2 { margin: 0; font-size: clamp(34px, 4.3vw, 50px); font-weight: 500; letter-sp
 .experience-list li::before { position: absolute; top: .75em; left: 0; width: 5px; height: 1px; background: var(--accent); content: ""; }
 
 .skills-section { padding-block: 91px 99px; }
-.skill-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.skill-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .skill-group { min-height: 174px; padding: 21px 22px 22px 0; }
 .skill-group + .skill-group { padding-left: 22px; border-left: 1px solid var(--line); }
 .skill-group h3 { margin: 0 0 15px; color: var(--accent); font: 11px var(--mono); text-transform: uppercase; }
@@ -149,6 +157,7 @@ h2 { margin: 0; font-size: clamp(34px, 4.3vw, 50px); font-weight: 500; letter-sp
 .detail-category { margin: 0 0 15px; color: var(--accent); font: 11px var(--mono); text-transform: uppercase; }
 .detail-role { margin: 0 0 5px; color: var(--muted); font-size: 13px; }
 .detail-meta { color: var(--muted); font: 11px var(--mono); }
+.detail-status { margin: 9px 0 0; color: var(--accent); font: 11px var(--mono); text-transform: uppercase; }
 .detail-cover { width: 100%; max-height: 560px; display: block; border: 1px solid var(--line); background: var(--paper-deep); object-fit: cover; }
 .detail-content { padding-block: 55px 100px; display: grid; grid-template-columns: minmax(180px, .42fr) minmax(0, 1fr); gap: clamp(40px, 8vw, 100px); }
 .detail-aside { align-self: start; position: sticky; top: 24px; }
@@ -159,6 +168,8 @@ h2 { margin: 0; font-size: clamp(34px, 4.3vw, 50px); font-weight: 500; letter-sp
 .detail-section { padding-block: 0 28px; margin-bottom: 29px; border-bottom: 1px solid var(--line); }
 .detail-section h2 { margin-bottom: 13px; font-size: 23px; }
 .detail-section p { max-width: 700px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.85; white-space: pre-line; }
+.detail-section ul { max-width: 700px; margin: 0; padding-left: 19px; color: var(--muted); font-size: 14px; line-height: 1.85; }
+.detail-section li + li { margin-top: 4px; }
 .detail-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
 .detail-gallery img { width: 100%; aspect-ratio: 1.55; object-fit: cover; border: 1px solid var(--line); }
 .detail-note { padding: 16px 18px; border-left: 2px solid var(--accent); background: var(--accent-soft); color: #3e5149; font-size: 12px; }
@@ -178,9 +189,9 @@ h2 { margin: 0; font-size: clamp(34px, 4.3vw, 50px); font-weight: 500; letter-sp
   .project-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
   .project-card:last-child:nth-child(odd) .project-image-wrap { aspect-ratio: 2.3; }
   .experience-layout { grid-template-columns: 1fr 1.15fr; gap: 38px; }
-  .skill-grid { grid-template-columns: repeat(2, 1fr); }
-  .skill-group:nth-child(3) { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
-  .skill-group:nth-child(4) { border-top: 1px solid var(--line); }
+  .skill-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .skill-group:nth-child(4) { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+  .skill-group:nth-child(5) { border-top: 1px solid var(--line); }
   .about-layout { gap: 45px; }
 }
 
@@ -201,6 +212,9 @@ h2 { margin: 0; font-size: clamp(34px, 4.3vw, 50px); font-weight: 500; letter-sp
   .section-intro { margin-top: 12px; }
   h2 { font-size: 37px; }
   .project-grid { grid-template-columns: 1fr; gap: 14px; }
+  .project-card-highlighted { grid-column: auto; }
+  .project-card-highlighted .project-card-link { display: flex; flex-direction: column; }
+  .project-card-highlighted .project-image-wrap { min-height: 0; aspect-ratio: 1.7; }
   .project-card:last-child:nth-child(odd) { grid-column: auto; }
   .project-card:last-child:nth-child(odd) .project-image-wrap { aspect-ratio: 1.65; }
   .project-image-wrap { aspect-ratio: 1.7; }
@@ -208,10 +222,12 @@ h2 { margin: 0; font-size: clamp(34px, 4.3vw, 50px); font-weight: 500; letter-sp
   .experience-layout { padding-block: 65px; grid-template-columns: 1fr; gap: 31px; }
   .experience-heading h2 { font-size: 45px; }
   .experience-list { grid-template-columns: 1fr; gap: 9px; }
-  .skill-grid { grid-template-columns: 1fr 1fr; }
+  .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .skill-group { min-height: 154px; padding: 18px 10px 18px 0; }
   .skill-group + .skill-group { padding-left: 12px; }
-  .skill-group:nth-child(3) { padding-left: 0; }
+  .skill-group:nth-child(3), .skill-group:nth-child(5) { padding-left: 0; border-left: 0; }
+  .skill-group:nth-child(4) { padding-left: 12px; border-left: 1px solid var(--line); }
+  .skill-group:nth-child(5) { border-top: 1px solid var(--line); }
   .skill-group li { font-size: 12px; }
   .awards-band { padding-block: 64px; }
   .award-row { min-height: 100px; grid-template-columns: 54px 1fr 23px; gap: 10px; }

@@ -1,0 +1,29 @@
+{
+  "slug": "student-homework-tracker",
+  "title": "Student Homework Tracker",
+  "category": "Portfolio Project",
+  "type": "Prototype / MVP",
+  "status": "Planned prototype",
+  "description": "A planned mobile application concept for organizing homework, subjects, exam schedules, and deadlines. This is a portfolio project concept, not a commercial application.",
+  "technologies": ["Flutter", "Firebase", "Firestore", "Firebase Cloud Messaging"],
+  "image": "cover.svg",
+  "imageAlt": "Illustrated placeholder for Student Homework Tracker. Replace with an approved project image when available.",
+  "screenshots": [],
+  "features": [
+    "Homework management",
+    "Subject management",
+    "Calendar and exam schedule",
+    "Deadline tracking",
+    "Progress tracking",
+    "Push notifications",
+    "Authentication",
+    "Firebase integration",
+    "Real-time synchronization",
+    "Local caching"
+  ],
+  "featureLabel": "Planned scope",
+  "featured": true,
+  "highlighted": false,
+  "professional": false,
+  "isPrivate": false
+}

@@ -17,11 +17,24 @@ function addSection(parent, title, content) {
   parent.append(section);
 }
 
+function addListSection(parent, title, items) {
+  if (!Array.isArray(items) || !items.length) return;
+  const section = document.createElement("section");
+  section.className = "detail-section";
+  addText(section, "h2", "", title);
+  const list = document.createElement("ul");
+  for (const item of items) addText(list, "li", "", item);
+  section.append(list);
+  parent.append(section);
+}
+
 function addLinks(parent, project) {
   const availableLinks = [
     ["GitHub", project.githubUrl],
     ["Live demo", project.demoUrl],
-    ["Case study", project.caseStudyUrl]
+    ["Case study", project.caseStudyUrl],
+    [project.externalLinkLabel || "View project post ↗", project.externalUrl],
+    ["Demo video", project.demoVideoUrl]
   ].filter(([, url]) => typeof url === "string" && url.trim());
   if (!availableLinks.length) return;
 
@@ -31,6 +44,7 @@ function addLinks(parent, project) {
     const link = document.createElement("a");
     link.href = url;
     link.textContent = label;
+    link.target = "_blank";
     link.rel = "noopener noreferrer";
     links.append(link);
   }
@@ -72,8 +86,10 @@ async function renderProject() {
     addText(headingGroup, "p", "detail-category", project.category);
     addText(headingGroup, "h1", "", project.title);
     const role = document.createElement("div");
-    addText(role, "p", "detail-role", project.role);
+    if (project.role) addText(role, "p", "detail-role", project.role);
     if (project.team) addText(role, "p", "detail-meta", `Team: ${project.team}`);
+    if (project.type) addText(role, "p", "detail-meta", project.type);
+    if (project.status) addText(role, "p", "detail-status", project.status);
     intro.append(headingGroup, role);
     root.append(intro);
 
@@ -104,9 +120,8 @@ async function renderProject() {
     addSection(prose, "My contribution", project.contribution);
     addSection(prose, "Problem", project.problem);
     addSection(prose, "Solution", project.solution);
-    if (Array.isArray(project.features) && project.features.length) {
-      addSection(prose, "Features", project.features.join("\n"));
-    }
+    addListSection(prose, "Team", project.teamComposition);
+    addListSection(prose, project.featureLabel || "Features", project.features);
     addScreenshots(prose, project);
     addSection(prose, "Achievement", project.achievement);
     if (project.professional || project.isPrivate) {

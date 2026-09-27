@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Student Homework Tracker media placeholder</title>
+  <desc id="desc">Illustrated concept placeholder, not a project screenshot. Replace with an actual project image if the prototype is implemented.</desc>
+  <rect width="1200" height="720" fill="#edf0e8"/>
+  <path d="M0 590h1200" stroke="#d2dbce" stroke-width="2"/>
+  <rect x="800" y="105" width="230" height="440" rx="20" fill="#fcfcfa" stroke="#176b5d" stroke-width="3"/>
+  <path d="M827 159h176M827 198h111M827 262h176M827 301h150M827 365h176M827 404h124" stroke="#9bb3a4" stroke-width="9"/>
+  <circle cx="837" cy="237" r="7" fill="#176b5d"/><circle cx="837" cy="340" r="7" fill="#176b5d"/><circle cx="837" cy="443" r="7" fill="#176b5d"/>
+  <path d="M863 492h104" stroke="#176b5d" stroke-width="3"/>
+  <text x="68" y="103" fill="#176b5d" font-family="monospace" font-size="18" letter-spacing="1">CONCEPT ART / NOT A SCREENSHOT</text>
+  <text x="68" y="345" fill="#18221e" font-family="Georgia,serif" font-size="68">Student</text>
+  <text x="68" y="421" fill="#18221e" font-family="Georgia,serif" font-size="68">Homework Tracker</text>
+  <text x="68" y="485" fill="#176b5d" font-family="monospace" font-size="16">PLANNED PORTFOLIO PROTOTYPE</text>
+  <text x="68" y="657" fill="#53625a" font-family="monospace" font-size="14">REPLACE WITH PROJECT MEDIA IF IMPLEMENTED</text>
+</svg>

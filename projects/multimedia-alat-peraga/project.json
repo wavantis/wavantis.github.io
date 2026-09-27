@@ -1,0 +1,30 @@
+{
+  "slug": "multimedia-alat-peraga",
+  "title": "Multimedia Alat Peraga Pendidikan",
+  "category": "Interactive Educational System",
+  "role": "Developer / Flutter & Hardware Integration",
+  "description": "An interactive educational system built with Flutter and integrated with a microcontroller. Educational objects appear in grids and sliders; selecting an object activates a physical spotlight through a relay module to highlight the corresponding real-world object.",
+  "contribution": "Each application in the overall project was handled by one developer, and this specific application was my responsibility. The actual deployment used a touchscreen device connected to the hardware. The Windows version shown in the recording was used for preview purposes.",
+  "technologies": ["Flutter", "Arduino Uno", "Relay Module", "Windows", "Touchscreen"],
+  "image": "cover.svg",
+  "imageAlt": "Illustrated placeholder for Multimedia Alat Peraga Pendidikan. Replace with an approved project image.",
+  "screenshots": [],
+  "features": [
+    "Interactive educational object selection",
+    "Grid-based navigation",
+    "Slider controls",
+    "Physical spotlight interaction",
+    "Flutter application",
+    "Arduino Uno integration",
+    "Relay control",
+    "Touchscreen interface",
+    "Hardware and software integration"
+  ],
+  "featureLabel": "Key features",
+  "externalUrl": "https://www.instagram.com/p/DSiVbP6gSHi/",
+  "externalLinkLabel": "View project post ↗",
+  "featured": true,
+  "highlighted": true,
+  "professional": false,
+  "isPrivate": false
+}
