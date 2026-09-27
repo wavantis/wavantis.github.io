@@ -1,0 +1,17 @@
+{
+  "slug": "mazi",
+  "title": "Mazi",
+  "category": "Award-Winning Android Application",
+  "role": "Mobile Developer",
+  "team": "4 people",
+  "description": "A collaborative learning application designed to help students find learning partners, choose learning materials, share documents, and discuss subjects together.",
+  "contribution": "Mobile application development.",
+  "technologies": ["Android", "Java"],
+  "image": "cover.svg",
+  "imageAlt": "Placeholder artwork for Mazi; replace with project media.",
+  "screenshots": [],
+  "achievement": "1st Place - Mobile App Competition 2017",
+  "featured": true,
+  "professional": false,
+  "isPrivate": false
+}

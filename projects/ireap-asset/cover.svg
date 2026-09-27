@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">iReap Asset media placeholder</title>
+  <desc id="desc">A typographic placeholder. Replace this file with approved iReap Asset project media.</desc>
+  <rect width="1200" height="720" fill="#e9efea"/>
+  <path d="M0 0h1200v720H0z" fill="none" stroke="#c9d8ce" stroke-width="2"/>
+  <path d="M700 180h330v330H700z" fill="#dce7de" stroke="#176b5d" stroke-width="2"/>
+  <path d="M700 290h330M810 180v330M920 180v330" stroke="#9bb3a4" stroke-width="2"/>
+  <circle cx="755" cy="235" r="15" fill="#176b5d"/><circle cx="865" cy="345" r="15" fill="#176b5d"/><circle cx="975" cy="455" r="15" fill="#176b5d"/>
+  <text x="70" y="116" fill="#176b5d" font-family="monospace" font-size="19" letter-spacing="1">PROJECT MEDIA / PLACEHOLDER</text>
+  <text x="70" y="420" fill="#18221e" font-family="Georgia,serif" font-size="72">iReap Asset</text>
+  <text x="70" y="472" fill="#53625a" font-family="monospace" font-size="17">Replace with approved project media</text>
+  <text x="70" y="654" fill="#53625a" font-family="monospace" font-size="15">ASSET MANAGEMENT / PROFESSIONAL WORK</text>
+</svg>

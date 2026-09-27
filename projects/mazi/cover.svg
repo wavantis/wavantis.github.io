@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Mazi media placeholder</title>
+  <desc id="desc">A typographic placeholder. Replace this file with Mazi project media.</desc>
+  <rect width="1200" height="720" fill="#edf0e8"/>
+  <path d="M0 160h1200M0 560h1200" stroke="#d2dbce" stroke-width="2"/>
+  <path d="M810 210h240v300H810z" fill="#dce8dc" stroke="#176b5d" stroke-width="2"/>
+  <path d="M850 270h160M850 310h110M850 390h160M850 430h132" stroke="#86a798" stroke-width="8"/>
+  <circle cx="930" cy="485" r="9" fill="#176b5d"/>
+  <text x="70" y="116" fill="#176b5d" font-family="monospace" font-size="19" letter-spacing="1">PROJECT MEDIA / PLACEHOLDER</text>
+  <text x="70" y="420" fill="#18221e" font-family="Georgia,serif" font-size="82">Mazi</text>
+  <text x="70" y="472" fill="#53625a" font-family="monospace" font-size="17">Replace with project media</text>
+  <text x="70" y="654" fill="#53625a" font-family="monospace" font-size="15">ANDROID / MOBILE APP COMPETITION 2017</text>
+</svg>
