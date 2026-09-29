@@ -2,9 +2,8 @@
   "slug": "multimedia-alat-peraga",
   "title": "Multimedia Alat Peraga Pendidikan",
   "category": "Interactive Educational System",
-  "role": "Developer / Flutter & Hardware Integration",
   "description": "An interactive educational system built with Flutter and integrated with a microcontroller. Educational objects appear in grids and sliders; selecting an object activates a physical spotlight through a relay module to highlight the corresponding real-world object.",
-  "contribution": "Each application in the overall project was handled by one developer, and this specific application was my responsibility. The actual deployment used a touchscreen device connected to the hardware. The Windows version shown in the recording was used for preview purposes.",
+  "implementationNotes": "The deployed system used a touchscreen device connected to physical hardware. The Windows version shown in the recording was used for preview purposes.",
   "technologies": ["Flutter", "Arduino Uno", "Relay Module", "Windows", "Touchscreen"],
   "image": "cover.svg",
   "imageAlt": "Illustrated placeholder for Multimedia Alat Peraga Pendidikan. Replace with an approved project image.",
@@ -26,5 +25,27 @@
   "featured": true,
   "highlighted": true,
   "professional": false,
-  "isPrivate": false
+  "isPrivate": false,
+  "translations": {
+    "id": {
+      "title": "Multimedia Alat Peraga Pendidikan",
+      "category": "Sistem Edukasi Interaktif",
+      "description": "Aplikasi pembelajaran interaktif yang dibangun menggunakan Flutter dan terintegrasi dengan Arduino Uno serta modul relay. Ketika pengguna memilih objek pembelajaran pada aplikasi, sistem akan mengaktifkan spotlight fisik untuk menyorot objek yang sesuai di lingkungan nyata.",
+      "implementationNotes": "Sistem yang digunakan terhubung ke hardware melalui perangkat touchscreen. Versi Windows yang terlihat dalam rekaman digunakan untuk preview.",
+      "features": ["Pemilihan objek pembelajaran", "Grid navigation", "Slider controls", "Physical spotlight", "Integrasi Arduino", "Relay control", "Touchscreen interface", "Integrasi hardware dan software"],
+      "featureLabel": "Fitur utama",
+      "imageAlt": "Placeholder ilustrasi Multimedia Alat Peraga Pendidikan. Ganti dengan gambar project yang telah disetujui.",
+      "externalLinkLabel": "Lihat Project di Instagram ↗"
+    },
+    "en": {
+      "title": "Multimedia Educational Teaching Aid",
+      "category": "Interactive Educational System",
+      "description": "An interactive educational application built with Flutter and integrated with Arduino Uno and a relay module. When a user selects an educational object in the application, the system triggers a physical spotlight to highlight the corresponding real-world object.",
+      "implementationNotes": "The deployed system used a touchscreen device connected to physical hardware. The Windows version shown in the recording was used for preview purposes.",
+      "features": ["Educational object selection", "Grid navigation", "Slider controls", "Physical spotlight", "Arduino integration", "Relay control", "Touchscreen interface", "Hardware/software integration"],
+      "featureLabel": "Key features",
+      "imageAlt": "Illustrated placeholder for Multimedia Educational Teaching Aid. Replace with an approved project image.",
+      "externalLinkLabel": "View Project Post ↗"
+    }
+  }
 }

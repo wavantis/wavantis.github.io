@@ -8,10 +8,10 @@ function addText(parent, tag, className, value) {
   return element;
 }
 
-function addSection(parent, title, content) {
+function addSection(parent, title, content, extraClass = "") {
   if (!content) return;
   const section = document.createElement("section");
-  section.className = "detail-section";
+  section.className = extraClass ? `detail-section ${extraClass}` : "detail-section";
   addText(section, "h2", "", title);
   addText(section, "p", "", content);
   parent.append(section);
@@ -28,13 +28,14 @@ function addListSection(parent, title, items) {
   parent.append(section);
 }
 
-function addLinks(parent, project) {
+function addLinks(parent, project, i18n) {
+  const projectText = (key) => i18n.project(project, key);
   const availableLinks = [
     ["GitHub", project.githubUrl],
     ["Live demo", project.demoUrl],
     ["Case study", project.caseStudyUrl],
-    [project.externalLinkLabel || "View project post ↗", project.externalUrl],
-    ["Demo video", project.demoVideoUrl]
+    [projectText("externalLinkLabel") || i18n.get("detail.projectPost"), project.externalUrl],
+    [i18n.get("detail.demoVideo"), project.demoVideoUrl]
   ].filter(([, url]) => typeof url === "string" && url.trim());
   if (!availableLinks.length) return;
 
@@ -51,11 +52,11 @@ function addLinks(parent, project) {
   parent.append(links);
 }
 
-function addScreenshots(parent, project) {
+function addScreenshots(parent, project, i18n) {
   if (!Array.isArray(project.screenshots) || !project.screenshots.length) return;
   const section = document.createElement("section");
   section.className = "detail-section";
-  addText(section, "h2", "", "Screenshots");
+  addText(section, "h2", "", i18n.get("detail.screenshots"));
   const gallery = document.createElement("div");
   gallery.className = "detail-gallery";
   for (const screenshot of project.screenshots) {
@@ -74,22 +75,29 @@ function addScreenshots(parent, project) {
 }
 
 async function renderProject() {
+  const i18n = await window.wavantisLanguageReady;
+  const translate = (key) => i18n?.get(key) || key;
   try {
     const response = await fetch(root.dataset.project);
     if (!response.ok) throw new Error("Project details could not be loaded.");
     const project = await response.json();
-    document.title = `${project.title} - Risnawan Budianto | Wavantis`;
+    const projectText = (key) => i18n.project(project, key);
+    document.title = `${projectText("title")} — Wavantis`;
+    const description = document.querySelector('meta[name="description"]');
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (description) description.content = projectText("description") || translate("metadata.description");
+    if (ogTitle) ogTitle.content = document.title;
+    if (ogDescription) ogDescription.content = projectText("description") || translate("metadata.description");
 
     const intro = document.createElement("header");
     intro.className = "detail-hero section-shell";
     const headingGroup = document.createElement("div");
-    addText(headingGroup, "p", "detail-category", project.category);
-    addText(headingGroup, "h1", "", project.title);
+    addText(headingGroup, "p", "detail-category", projectText("category"));
+    addText(headingGroup, "h1", "", projectText("title"));
     const role = document.createElement("div");
-    if (project.role) addText(role, "p", "detail-role", project.role);
-    if (project.team) addText(role, "p", "detail-meta", `Team: ${project.team}`);
-    if (project.type) addText(role, "p", "detail-meta", project.type);
-    if (project.status) addText(role, "p", "detail-status", project.status);
+    if (projectText("type")) addText(role, "p", "detail-meta", projectText("type"));
+    if (projectText("status")) addText(role, "p", "detail-status", projectText("status"));
     intro.append(headingGroup, role);
     root.append(intro);
 
@@ -97,7 +105,7 @@ async function renderProject() {
       const image = document.createElement("img");
       image.className = "detail-cover section-shell";
       image.src = project.image;
-      image.alt = project.imageAlt || `${project.title} project media`;
+      image.alt = projectText("imageAlt") || `${projectText("title")} ${translate("detail.placeholder")}`;
       image.width = 1200;
       image.height = 720;
       root.append(image);
@@ -108,7 +116,7 @@ async function renderProject() {
     const aside = document.createElement("aside");
     aside.className = "detail-aside";
     if (Array.isArray(project.technologies) && project.technologies.length) {
-      addText(aside, "h2", "", "Technology");
+      addText(aside, "h2", "", translate("detail.technology"));
       const tags = document.createElement("ul");
       for (const technology of project.technologies) addText(tags, "li", "", technology);
       aside.append(tags);
@@ -116,26 +124,25 @@ async function renderProject() {
 
     const prose = document.createElement("div");
     prose.className = "detail-prose";
-    addSection(prose, "Overview", project.description);
-    addSection(prose, "My contribution", project.contribution);
-    addSection(prose, "Problem", project.problem);
-    addSection(prose, "Solution", project.solution);
-    addListSection(prose, "Team", project.teamComposition);
-    addListSection(prose, project.featureLabel || "Features", project.features);
-    addScreenshots(prose, project);
-    addSection(prose, "Achievement", project.achievement);
+    addSection(prose, translate("detail.overview"), projectText("description"));
+    addSection(prose, translate("detail.notes"), projectText("implementationNotes"));
+    addSection(prose, translate("detail.problem"), projectText("problem"));
+    addSection(prose, translate("detail.solution"), projectText("solution"));
+    addListSection(prose, projectText("featureLabel") || translate("detail.features"), projectText("features"));
+    addScreenshots(prose, project, i18n);
+    addSection(prose, translate("detail.achievement"), projectText("achievement"), "detail-award");
     if (project.professional || project.isPrivate) {
       const note = document.createElement("p");
       note.className = "detail-note";
-      note.textContent = "Some project details and source code cannot be publicly shared due to proprietary or confidentiality restrictions.";
+      note.textContent = translate("detail.confidential");
       prose.append(note);
     }
-    addLinks(prose, project);
+    addLinks(prose, project, i18n);
     content.append(aside, prose);
     root.append(content);
   } catch (error) {
     root.replaceChildren();
-    addText(root, "p", "detail-error section-shell", "Project details are not available right now.");
+    addText(root, "p", "detail-error section-shell", translate("detail.error"));
     console.error(error);
   }
 }

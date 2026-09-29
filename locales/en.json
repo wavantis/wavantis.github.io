@@ -1,0 +1,85 @@
+{
+  "brand": {
+    "name": "WAVANTIS",
+    "tagline": "Software Development Studio"
+  },
+  "nav": {
+    "projects": "Projects",
+    "capabilities": "Capabilities",
+    "about": "About",
+    "contact": "Contact",
+    "mainLabel": "Main navigation",
+    "homeLabel": "Wavantis home"
+  },
+  "accessibility": {
+    "skip": "Skip to content",
+    "language": "Choose language"
+  },
+  "hero": {
+    "statement": "Building practical software for real-world needs.",
+    "description": "Developing mobile applications, web products, backend systems, and software solutions built around practical needs.",
+    "viewProjects": "View Projects",
+    "contact": "Let's Work Together"
+  },
+  "projects": {
+    "eyebrow": "Wavantis projects",
+    "title": "Selected Projects",
+    "intro": "Selected work demonstrating the kinds of software solutions Wavantis can build.",
+    "loading": "Loading selected projects...",
+    "empty": "No featured projects are available yet.",
+    "error": "Selected projects could not be loaded right now.",
+    "details": "View project details",
+    "professional": "Professional work"
+  },
+  "capabilities": {
+    "eyebrow": "Capabilities",
+    "title": "Capabilities",
+    "intro": "Practical software solutions across mobile, web, data, and hardware integration.",
+    "mobile": "Mobile Development",
+    "web": "Web Development",
+    "webApps": "Web Applications",
+    "responsive": "Responsive Interfaces",
+    "backend": "Backend & API",
+    "integration": "Data & Integration",
+    "sync": "Data Synchronization",
+    "hardware": "Hardware Integration",
+    "touchscreen": "Touchscreen Systems"
+  },
+  "about": {
+    "eyebrow": "About Wavantis",
+    "title": "About Wavantis",
+    "description": "Wavantis is an independent software development studio focused on building mobile applications, web applications, backend systems, and practical software solutions."
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "title": "Have a project in mind?",
+    "intro": "Let's discuss your software idea or project requirements.",
+    "note": "Contact details will be added when official channels are available."
+  },
+  "footer": {
+    "copyright": "© 2026 Wavantis",
+    "backTop": "Back to top"
+  },
+  "detail": {
+    "back": "Back to selected projects",
+    "technology": "Technology",
+    "overview": "Overview",
+    "notes": "Implementation notes",
+    "problem": "Problem",
+    "solution": "Solution",
+    "features": "Features",
+    "screenshots": "Screenshots",
+    "achievement": "Achievement",
+    "projectPost": "View Project Post ↗",
+    "demoVideo": "Demo video",
+    "confidential": "Some project details and source code cannot be publicly shared due to proprietary or confidentiality restrictions.",
+    "error": "Project details are not available right now.",
+    "placeholder": "Project media is not available yet"
+  },
+  "metadata": {
+    "title": "Wavantis — Software Development Studio",
+    "description": "Wavantis is a software development studio building mobile applications, web applications, backend systems, and practical software solutions.",
+    "ogTitle": "Wavantis — Software Development Studio",
+    "ogDescription": "Mobile, web, backend, and hardware-integrated software projects by Wavantis."
+  }
+}

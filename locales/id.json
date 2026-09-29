@@ -1,0 +1,85 @@
+{
+  "brand": {
+    "name": "WAVANTIS",
+    "tagline": "Software Development Studio"
+  },
+  "nav": {
+    "projects": "Project",
+    "capabilities": "Layanan",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "mainLabel": "Navigasi utama",
+    "homeLabel": "Beranda Wavantis"
+  },
+  "accessibility": {
+    "skip": "Lewati ke konten",
+    "language": "Pilih bahasa"
+  },
+  "hero": {
+    "statement": "Membangun software yang praktis untuk kebutuhan nyata.",
+    "description": "Mengembangkan aplikasi mobile, web, backend, dan solusi software yang terhubung dengan kebutuhan nyata.",
+    "viewProjects": "Lihat Project",
+    "contact": "Mari Bekerja Sama"
+  },
+  "projects": {
+    "eyebrow": "Project Wavantis",
+    "title": "Project Pilihan",
+    "intro": "Project pilihan yang menunjukkan beragam solusi software yang dapat dibangun Wavantis.",
+    "loading": "Memuat project pilihan...",
+    "empty": "Belum ada project pilihan.",
+    "error": "Project tidak dapat dimuat saat ini.",
+    "details": "Lihat detail project",
+    "professional": "Pengalaman profesional"
+  },
+  "capabilities": {
+    "eyebrow": "Layanan",
+    "title": "Yang Kami Kerjakan",
+    "intro": "Solusi software praktis untuk mobile, web, data, dan integrasi perangkat keras.",
+    "mobile": "Mobile Development",
+    "web": "Web Development",
+    "webApps": "Web Applications",
+    "responsive": "Responsive Interfaces",
+    "backend": "Backend & API",
+    "integration": "Data & Integration",
+    "sync": "Data Synchronization",
+    "hardware": "Hardware Integration",
+    "touchscreen": "Touchscreen Systems"
+  },
+  "about": {
+    "eyebrow": "Tentang Wavantis",
+    "title": "Tentang Wavantis",
+    "description": "Wavantis adalah software development studio independen yang berfokus pada pembuatan aplikasi mobile, web application, backend systems, dan solusi software praktis."
+  },
+  "contact": {
+    "eyebrow": "Hubungi Kami",
+    "title": "Memiliki project?",
+    "intro": "Diskusikan ide atau kebutuhan software Anda bersama Wavantis.",
+    "note": "Informasi kontak akan ditambahkan setelah kanal resmi tersedia."
+  },
+  "footer": {
+    "copyright": "© 2026 Wavantis",
+    "backTop": "Kembali ke atas"
+  },
+  "detail": {
+    "back": "Kembali ke project pilihan",
+    "technology": "Teknologi",
+    "overview": "Ringkasan",
+    "notes": "Catatan implementasi",
+    "problem": "Masalah",
+    "solution": "Solusi",
+    "features": "Fitur",
+    "screenshots": "Screenshot",
+    "achievement": "Pencapaian",
+    "projectPost": "Lihat Project di Instagram ↗",
+    "demoVideo": "Video demo",
+    "confidential": "Sebagian detail project dan source code tidak dapat dibagikan karena batasan proprietary atau kerahasiaan.",
+    "error": "Detail project belum tersedia saat ini.",
+    "placeholder": "Media project belum tersedia"
+  },
+  "metadata": {
+    "title": "Wavantis — Software Development Studio",
+    "description": "Wavantis adalah software development studio yang membangun aplikasi mobile, web, backend, dan solusi software untuk kebutuhan nyata.",
+    "ogTitle": "Wavantis — Software Development Studio",
+    "ogDescription": "Project software mobile, web, backend, dan integrasi hardware dari Wavantis."
+  }
+}

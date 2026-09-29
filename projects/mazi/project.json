@@ -1,19 +1,10 @@
 {
   "slug": "mazi",
   "title": "Mazi",
-  "category": "Award-Winning Android Application",
+  "category": "Collaborative Learning Application",
   "type": "Award-Winning Project",
   "year": "2017",
-  "role": "Mobile Developer",
-  "team": "4 members",
-  "description": "An Android-based collaborative learning application designed to help students find friends to learn with. Students can choose learning materials, find learning partners, share materials and documents, share knowledge, and discuss subjects together. The concept focused on collaborative and social learning.",
-  "contribution": "Responsible for mobile application development as part of a four-person team.",
-  "teamComposition": [
-    "Mobile Developer - Risnawan Budianto",
-    "Backend Developer",
-    "UI/UX Designer",
-    "Presentation and pitching"
-  ],
+  "description": "Mazi is an Android collaborative learning application designed to help students find learning partners, choose learning materials, share documents and knowledge, and discuss subjects.",
   "technologies": ["Android", "Java"],
   "image": "cover.svg",
   "imageAlt": "Placeholder artwork for Mazi; replace with project media.",
@@ -28,5 +19,25 @@
   "featured": true,
   "highlighted": false,
   "professional": false,
-  "isPrivate": false
+  "isPrivate": false,
+  "translations": {
+    "id": {
+      "title": "Mazi",
+      "category": "Aplikasi Pembelajaran Kolaboratif",
+      "type": "Project Peraih Penghargaan",
+      "description": "Mazi adalah aplikasi Android untuk pembelajaran kolaboratif yang membantu siswa menemukan teman belajar, memilih materi, berbagi dokumen, berbagi pengetahuan, dan berdiskusi.",
+      "features": ["Memilih materi belajar", "Menemukan teman belajar", "Berbagi materi dan dokumen", "Berbagi pengetahuan dan berdiskusi"],
+      "achievement": "Juara 1 - Mobile App Competition 2017",
+      "imageAlt": "Placeholder ilustrasi Mazi. Ganti dengan media project yang telah disetujui."
+    },
+    "en": {
+      "title": "Mazi",
+      "category": "Collaborative Learning Application",
+      "type": "Award-Winning Project",
+      "description": "Mazi is an Android collaborative learning application designed to help students find learning partners, choose learning materials, share documents and knowledge, and discuss subjects.",
+      "features": ["Choose learning materials", "Find learning partners", "Share learning materials and documents", "Share knowledge and discuss subjects"],
+      "achievement": "1st Place - Mobile App Competition 2017",
+      "imageAlt": "Placeholder artwork for Mazi. Replace with approved project media."
+    }
+  }
 }

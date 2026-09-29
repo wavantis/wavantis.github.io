@@ -1,8 +1,8 @@
 {
   "slug": "student-homework-tracker",
   "title": "Student Homework Tracker",
-  "category": "Portfolio Project",
-  "type": "Prototype / MVP",
+  "category": "Productivity / Education",
+  "type": "Portfolio Project",
   "status": "Planned prototype",
   "description": "A planned mobile application concept for organizing homework, subjects, exam schedules, and deadlines. This is a portfolio project concept, not a commercial application.",
   "technologies": ["Flutter", "Firebase", "Firestore", "Firebase Cloud Messaging"],
@@ -25,5 +25,27 @@
   "featured": true,
   "highlighted": false,
   "professional": false,
-  "isPrivate": false
+  "isPrivate": false,
+  "translations": {
+    "id": {
+      "title": "Student Homework Tracker",
+      "category": "Produktivitas / Edukasi",
+      "type": "Portfolio Project",
+      "status": "Project Portfolio — konsep",
+      "description": "Konsep aplikasi mobile untuk membantu siswa mengelola tugas, mata pelajaran, jadwal kelas, ujian, deadline, dan perkembangan tugas. Project ini adalah konsep portfolio, bukan aplikasi komersial.",
+      "features": ["Manajemen tugas", "Manajemen mata pelajaran", "Kalender dan jadwal ujian", "Pelacakan deadline", "Pelacakan progress", "Push notification", "Authentication", "Integrasi Firebase", "Sinkronisasi real-time", "Local caching"],
+      "featureLabel": "Ruang lingkup konsep",
+      "imageAlt": "Placeholder ilustrasi Student Homework Tracker. Ganti dengan gambar project setelah prototype diimplementasikan."
+    },
+    "en": {
+      "title": "Student Homework Tracker",
+      "category": "Productivity / Education",
+      "type": "Portfolio Project",
+      "status": "Portfolio Project — concept",
+      "description": "A mobile application concept designed to help students manage homework, subjects, class schedules, exams, deadlines, and task progress. This is a portfolio project concept, not a commercial application.",
+      "features": ["Homework management", "Subject management", "Calendar and exam schedule", "Deadline tracking", "Progress tracking", "Push notifications", "Authentication", "Firebase integration", "Real-time synchronization", "Local caching"],
+      "featureLabel": "Planned scope",
+      "imageAlt": "Illustrated placeholder for Student Homework Tracker. Replace with an approved project image when implemented."
+    }
+  }
 }
